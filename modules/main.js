@@ -23,7 +23,8 @@ function addToFavorites(pokemonName) {
 /* Display Pokémon */
 function displayPokemon(pokemon, id) {
   const pokeDiv = document.createElement("div");
-  const cryUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/cry/${id}.ogg`;
+  const cryUrl = `https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/${id}.ogg`;
+  //const cryUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/cry/${id}.ogg`;
   const types = pokemon.types
     .map(
       (typeInfo) =>
@@ -43,15 +44,22 @@ function displayPokemon(pokemon, id) {
         <li>Defense: ${pokemon.stats[2].base_stat}</li>
       </ul>
       <button 
-        onclick="playCry('${cryUrl}')" 
-        class="w-full bg-yellow-500 text-white py-2 rounded-md hover:bg-yellow-600 transition duration-300 shadow-md mt-2"
+        class="play-cry w-full bg-yellow-500 text-white py-2 rounded-md hover:bg-yellow-600 transition duration-300 shadow-md mt-2"
       >
         Play cry
       </button>
-      <button onclick="addToFavorites('${pokemon.name}')" class="w-full bg-green-500 text-white py-2 rounded-md hover:bg-green-600 transition duration-300 shadow-md mt-2">Add to Favorites</button>
-    </div>`;
-  /* Append to parent elemnt */
+      <button class="add-favorite w-full bg-green-500 text-white py-2 rounded-md hover:bg-green-600 transition duration-300 shadow-md mt-2">Add to Favorites</button>    </div>`;
+
+  /* Append to parent element */
   pokemonList.appendChild(pokeDiv);
+
+  /* Add event listeners to the buttons */
+  pokeDiv
+    .querySelector(".play-cry")
+    .addEventListener("click", () => playCry(cryUrl));
+  pokeDiv
+    .querySelector(".add-favorite")
+    .addEventListener("click", () => addToFavorites(pokemon.name));
 }
 
 // Fetch and display a list of Pokémon
