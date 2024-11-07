@@ -39,24 +39,24 @@ function displayPokemon(pokemon, id) {
       <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}" class="bg-gray-400 p-4 h-24" />
       <h4>Stats</h4>    
       <ul >
-        <li>Type: ${types}</li>
+        <!-- li>Type: ${types}</li -->
         <li>Attack: ${pokemon.stats[1].base_stat}</li>
         <li>Defense: ${pokemon.stats[2].base_stat}</li>
       </ul>
-      <button 
+      <!-- button 
         class="play-cry w-full bg-yellow-500 text-white py-2 rounded-md hover:bg-yellow-600 transition duration-300 shadow-md mt-2"
       >
         Play cry
-      </button>
+      </button -->
       <button class="add-favorite w-full bg-green-500 text-white py-2 rounded-md hover:bg-green-600 transition duration-300 shadow-md mt-2">Add to Favorites</button>    </div>`;
 
   /* Append to parent element */
   pokemonList.appendChild(pokeDiv);
 
-  /* Add event listeners to the buttons */
+  /* Add event listeners to the buttons 
   pokeDiv
     .querySelector(".play-cry")
-    .addEventListener("click", () => playCry(cryUrl));
+    .addEventListener("click", () => playCry(cryUrl)); */
   pokeDiv
     .querySelector(".add-favorite")
     .addEventListener("click", () => addToFavorites(pokemon.name));
