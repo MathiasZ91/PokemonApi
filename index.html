@@ -8,68 +8,79 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="flex items-center justify-between px-6 py-4">
-      <!-- Left Section: Search Input -->
-      <div class="flex content-between space-x-2 mt-16">
-        <span class="icon">&#128269;</span>
-        <input
-          type="text"
-          class="border border-gray-400 rounded-md px-4"
-          placeholder="Search..."
-        />
-      </div>
+    <header>
+      <nav class="flex items-center justify-between px-6 py-4">
+        <!-- Left Section: Search Input -->
+        <div class="flex content-between space-x-2 mt-16">
+          <span class="icon">&#128269;</span>
+          <input
+            type="text"
+            class="border border-gray-400 rounded-md px-4"
+            placeholder="Search..."
+          />
+        </div>
 
-      <!-- Center Section: Navbar Links -->
-      <div id="Nav-container">
-        <ul class="flex justify-center space-x-6 font-sans mt-16">
-          <li
-            class="border border-gray-400 rounded-md px-2 py-1 hover:bg-gray-100 cursor-pointer text-gray-700"
-          >
-            <a href="#home">Home</a>
-          </li>
-          <li
-            class="border border-gray-400 rounded-md px-2 py-1 hover:bg-gray-100 cursor-pointer text-gray-700"
-          >
-            <a href="#battle">Battle</a>
-          </li>
-          <li
-            class="border border-gray-400 rounded-md px-2 py-1 hover:bg-gray-100 cursor-pointer text-gray-700"
-          >
-            <a href="#journal">Journal</a>
-          </li>
-          <li
-            class="border border-gray-400 rounded-md px-2 py-1 hover:bg-gray-100 cursor-pointer text-gray-700"
-          >
-            <a href="#videogames">Video Games</a>
-          </li>
-          <li
-            class="border border-gray-400 rounded-md px-2 py-1 hover:bg-gray-100 cursor-pointer text-gray-700"
-          >
-            <a href="#trending">Trending Card Game</a>
-          </li>
-          <li
-            class="border border-gray-400 rounded-md px-2 py-1 hover:bg-gray-100 cursor-pointer text-gray-700"
-          >
-            <a href="#animation">Animation</a>
-          </li>
-          <li
-            class="border border-gray-400 rounded-md px-2 py-1 hover:bg-gray-100 cursor-pointer text-gray-700"
-          >
-            <a href="#community">Community</a>
-          </li>
-          <li
-            class="border border-gray-400 rounded-md px-2 py-1 hover:bg-gray-100 cursor-pointer text-gray-700"
-          >
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
+        <!-- Center Section: Navbar Links -->
+        <div id="Nav-container">
+          <ul class="flex justify-center space-x-6 font-sans mt-16">
+            <li
+              class="border border-gray-400 rounded-md px-2 py-1 hover:bg-gray-100 cursor-pointer text-gray-700"
+            >
+              <a href="#home">Home</a>
+            </li>
+            <li
+              class="border border-gray-400 rounded-md px-2 py-1 hover:bg-gray-100 cursor-pointer text-gray-700"
+            >
+              <a href="#battle">Battle</a>
+            </li>
+            <li
+              class="border border-gray-400 rounded-md px-2 py-1 hover:bg-gray-100 cursor-pointer text-gray-700"
+            >
+              <a href="#journal">Journal</a>
+            </li>
+            <li
+              class="border border-gray-400 rounded-md px-2 py-1 hover:bg-gray-100 cursor-pointer text-gray-700"
+            >
+              <a href="#videogames">Video Games</a>
+            </li>
+            <li
+              class="border border-gray-400 rounded-md px-2 py-1 hover:bg-gray-100 cursor-pointer text-gray-700"
+            >
+              <a href="#trending">Trending Card Game</a>
+            </li>
+            <li
+              class="border border-gray-400 rounded-md px-2 py-1 hover:bg-gray-100 cursor-pointer text-gray-700"
+            >
+              <a href="#animation">Animation</a>
+            </li>
+            <li
+              class="border border-gray-400 rounded-md px-2 py-1 hover:bg-gray-100 cursor-pointer text-gray-700"
+            >
+              <a href="#community">Community</a>
+            </li>
+            <li
+              class="border border-gray-400 rounded-md px-2 py-1 hover:bg-gray-100 cursor-pointer text-gray-700"
+            >
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
 
-      <div class="flex content-between font-sans mt-16 mr-14">
-        <!-- Language icon (globe) -->
-        <span class="language-label">EN</span>
-      </div>
-    </nav>
+        <div class="flex content-between font-sans mt-16 mr-14">
+          <!-- Language icon (globe) -->
+          <span class="language-label">EN</span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- 20241107 RGo -->
+      <p class="hidden bg-red-500 text-white p-4" id="error-Message"></p>
+      <div
+        class="grid grid-cols-5 gap-4 mx-auto max-w-max"
+        id="pokemon-list"
+      ></div>
+    </main>
 
     <!-- Footer -->
     <footer class="w-full text-black justify-center py-8 fixed bottom-0 left-0">
@@ -132,5 +143,7 @@
     <!-- Scripts -->
     <script type="module" src="./script.js"></script>
     <script type="module" src="modules/favorites.js"></script>
+    <script type="module" src="./modules/main.js"></script>
+    <!-- 20241107 RGo -->
   </body>
 </html>
