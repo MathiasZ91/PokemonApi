@@ -1,13 +1,16 @@
 // Call Pokemon
 const errorMSG = document.getElementById("error-Message");
 const pokemonList = document.getElementById("pokemon-list");
+//use div?
+
+
 
 // Fetch and display a list of favorite Pokemon
 async function fetchFavoritePokemon() {
   const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
   if (favorites.length === 0) {
-    errorMSG.innerHTML = "No Pokémon in favorites.";
+    errorMSG.textContent = "No Pokémon in favorites.";
     errorMSG.classList.remove("hidden");
     return;
   }
@@ -20,7 +23,7 @@ async function fetchFavoritePokemon() {
       displayFavoritePokemon(data);
     }
   } catch (error) {
-    errorMSG.innerHTML = `${error}`;
+    errorMSG.textContent = 'Something went wrong!';
     errorMSG.classList.remove("hidden");
     console.error("Error fetching favorite Pokémon:", error);
   }
@@ -31,10 +34,10 @@ function displayFavoritePokemon(pokemon) {
   // Get the Pokemons types
   const types = pokemon.types.map(typeInfo => typeInfo.type.name).join(', ');
 
-  /*/Matteus
+  
   const pokeDiv = document.createElement("div");
   pokeDiv.classList.add("pokemon-card", "shadow-md", "w-52", "bg-gray-200", "p-4");
-*/
+
   pokeDiv.innerHTML = `
     <h3>${pokemon.name}</h3>
     <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}" class="bg-gray-400 p-4 h-24" />
