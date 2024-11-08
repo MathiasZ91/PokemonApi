@@ -1,16 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex Diary</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <title>PokemonAPI</title>
-</head>
-<body>
-    
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <header>
+      <nav class="flex items-center justify-between px-6 py-4">
+        <!-- Left Section: Search Input -->
+        <div class="flex content-between space-x-2 mt-16">
+          <span class="icon">&#128269;</span>
+          <input
+            type="text"
+            class="border border-gray-400 rounded-md px-4"
+            placeholder="Search..."
+          />
+        </div>
+
+        <!-- Center Section: Navbar Links -->
+        <div id="Nav-container">
+          <ul class="flex justify-center space-x-6 font-sans mt-16">
+            <li
+              class="border border-gray-400 rounded-md px-2 py-1 hover:bg-gray-100 cursor-pointer text-gray-700"
+            >
+              <a href="index.html">Home</a>
+            </li>
+            <li
+              class="border border-gray-400 rounded-md px-2 py-1 hover:bg-gray-100 cursor-pointer text-gray-700"
+            >
+              <a href="#battle">Battle</a>
+            </li>
+            <li
+              class="border border-gray-400 rounded-md px-2 py-1 hover:bg-gray-100 cursor-pointer text-gray-700"
+            >
+              <a href="#journal">Journal</a>
+            </li>
+            <li
+              class="border border-gray-400 rounded-md px-2 py-1 hover:bg-gray-100 cursor-pointer text-gray-700"
+            >
+              <a href="#videogames">Video Games</a>
+            </li>
+            <li
+              class="border border-gray-400 rounded-md px-2 py-1 hover:bg-gray-100 cursor-pointer text-gray-700"
+            >
+              <a href="#trending">Trending Card Game</a>
+            </li>
+            <li
+              class="border border-gray-400 rounded-md px-2 py-1 hover:bg-gray-100 cursor-pointer text-gray-700"
+            >
+              <a href="#animation">Animation</a>
+            </li>
+            <li
+              class="border border-gray-400 rounded-md px-2 py-1 hover:bg-gray-100 cursor-pointer text-gray-700"
+            >
+              <a href="#community">Community</a>
+            </li>
+            <li
+              class="border border-gray-400 rounded-md px-2 py-1 hover:bg-gray-100 cursor-pointer text-gray-700"
+            >
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex content-between font-sans mt-16 mr-14">
+          <!-- Language icon (globe) -->
+          <span class="language-label">EN</span>
+        </div>
+      </nav>
+    </header>
+
+
+    <!-- Footer -->
+    <footer class="w-full text-black justify-center py-8 fixed bottom-0 left-0">
+      <div class="flex flex-col items-center space-y-4 font-sans">
+        <div class="text">
+          <h1 class="text-lg font-semibold mb-2">
+            Join the Pokémon Community:
+          </h1>
+          <div class="flex space-x-2">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="email address"
+              required
+              class="border border-gray-400 rounded-md p-2 w-64 cursor-pointer text-gray-800"
+            />
+            <input
+              class="border border-gray-400 rounded-md px-4 py-2 bg-gray-200 hover:bg-gray-300 cursor-pointer text-gray-700"
+              type="submit"
+              value="Submit"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Media Icons -->
+      <div class="flex justify-center mt-6 space-x-4">
+        <a href="#">
+          <img src="facebook.png" alt="facebook" class="w-5 h-5" />
+        </a>
+        <a href="#">
+          <img src="instagram.jpeg" alt="instagram" class="w-5 h-5" />
+        </a>
+        <a href="#">
+          <img src="tiktok.png" alt="tiktok" class="w-5 h-5" />
+        </a>
+        <a href="#">
+          <img src="pinterest.png" alt="pinterest" class="w-5 h-5" />
+        </a>
+        <a href="#">
+          <img src="x.png" alt="x" class="w-5 h-5" />
+        </a>
+      </div>
+
+      <!-- Footer Links -->
+      <div class="flex justify-center space-x-8 text-gray-400 text-sm mt-6">
+        <a href="#" class="hover:underline">Contact Us</a>
+        <a href="#" class="hover:underline">FAQ</a>
+        <a href="#" class="hover:underline">Shipping & Returns</a>
+        <a href="#" class="hover:underline">Order Tracking</a>
+      </div>
+
+      <!-- Copyright  -->
+      <div class="text-center text-gray-500 text-xs mt-6">
+        © 2024 Pokémon. All rights reserved.
+      </div>
+    </footer>
+
+    <!-- Scripts -->
     <script type="module" src="./script.js"></script>
-    <script type="module" src="modules/favorites.js"></script> 
-</body>
+    <script type="module" src="./modules/favorites.js"></script>
+
+
+  </body>
 </html>

@@ -1,6 +1,9 @@
 // Call Pokemon
 const errorMSG = document.getElementById("error-Message");
 const pokemonList = document.getElementById("pokemon-list");
+//use div?
+
+
 
 // Fetch and display a list of favorite Pokemon
 async function fetchFavoritePokemon() {
