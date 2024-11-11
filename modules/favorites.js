@@ -47,6 +47,7 @@ function displayFavoritePokemon(pokemon) {
       <li>Defense: ${pokemon.stats[2].base_stat}</li>
     </ul>
     <button onclick="playCry('${pokemon.name}')" class="bg-blue-500 text-white py-1 px-3 rounded-md hover:bg-blue-600 transition duration-300 shadow-md mt-2">Play Cry</button>
+    <button onclick="deletePokemon('${pokemon.name}')" class="bg-blue-500 text-white py-1 px-3 rounded-md hover:bg-blue-600 transition duration-300 shadow-md mt-2">Delete Pokemon</button>
   `;
 // Add the Pokemon to the list on the page
   pokemonList.appendChild(pokeDiv);
@@ -71,3 +72,16 @@ async function playCry(pokemonName) {
 
 // Initial call to display favorites on page load
 fetchFavoritePokemon();
+
+//Delete Pokemon function
+function deletePokemon(pokemontype) {
+   
+ 
+  const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+  const updatedFavorites = favorites.filter(fav => fav !== pokemontype);
+  localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+  pokemonList.innerHTML = '';
+  fetchFavoritePokemon();
+  console.log(`${pokemontype} pokemon removed from favorites.`); 
+}
+
